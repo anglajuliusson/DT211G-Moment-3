@@ -107,7 +107,7 @@
 @media (min-width: 1025px) {
 .close{display: none;} 
 .menu-btn {display: none;} 
-.mobilmenu {display: none;} 
+.mobilmenu {display: none !important;} 
 body {
     display: grid;
     grid-template-areas: 
@@ -152,7 +152,7 @@ body {
 @media (max-width: 1024px) {
 .close{display: none;} 
 .menu-btn {display: none;} 
-.mobilmenu {display: none;} 
+.mobilmenu {display: none !important;} 
     body {
         display: grid;
         grid-template-areas: 
@@ -195,12 +195,15 @@ body {
     }
 }
 @media (max-width: 600px) {
+    .close{display: block;} 
+    .menu-btn {display: block;} 
+    .mobilmenu {display: block;} 
     body {
         display: grid;
         grid-template-areas: 
         "header"
         "main"
-        "footer";
+        "footer"; 
         grid-template-rows: auto;
         margin: 0%;
         justify-content: center;
@@ -233,45 +236,6 @@ body {
             text-align: center;
             font-size: large;
             margin: 2em;
-        }
-    }
-}
-
-//Ljusttema
-@mixin dark-text {
-    color: base.$dark-font-color;
-  }
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: base.$primary-color;
-        @include dark-text;
-
-        .navmenu a {
-            @include dark-text;
-        }
-
-        .main {
-            background-color: base.$lighten-color;
-            @include dark-text;
-        }
-    }
-}
-// Mörkttema
-@mixin light-text {
-    color: base.$light-font-color;
-  }
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: base.$darken-color;
-        @include light-text;
-    
-        .navmenu a {
-            @include light-text;
-        }
-
-        .main {
-            background-color: base.$secondary-color;
-            @include light-text;
         }
     }
 }
