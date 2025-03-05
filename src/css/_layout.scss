@@ -1,6 +1,7 @@
 @use "base";
 
 // Navmenu
+@media (min-width: 601px) {
 .menu {
     display: flex;
     justify-content: center;
@@ -18,6 +19,7 @@
             text-decoration: underline;
         }
     }
+}
 }
 @media (max-width:600px) { 
     /* Media queries så att hamburgarmenyn endast visas för mindre skärmar*/ 
@@ -234,29 +236,32 @@ body {
         }
     }
 }
+
 //Ljusttema
+@mixin dark-text {
+    color: base.$light-font-color;
+  }
 @media (prefers-color-scheme: light) {
     body {
         background-color: base.$primary-color;
 
         .main {
             background-color: base.$lighter-color;
-
-            %dark-text {color: base.$dark-font-color;}
-            h1, h2, h3, p {@extend %dark-text}
+            @include dark-text;
         }
     }
 }
 // Mörkttema
+@mixin light-text {
+    color: base.$dark-font-color;
+  }
 @media (prefers-color-scheme: dark) {
     body {
         background-color: base.$darker-color;
     
         .main {
-            background-color: base.$lighter-color;
-
-            %light-text {color: base.$light-font-color;}
-            h1, h2, h3, p {@extend %light-text}
+            background-color: base.$secondary-color;
+            @include light-text;
         }
     }
 }
