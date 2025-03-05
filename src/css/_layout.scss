@@ -244,6 +244,11 @@ body {
 @media (prefers-color-scheme: light) {
     body {
         background-color: base.$primary-color;
+        @include dark-text;
+
+        .navmenu a {
+            @include dark-text;
+        }
 
         .main {
             background-color: base.$lighten-color;
@@ -258,7 +263,12 @@ body {
 @media (prefers-color-scheme: dark) {
     body {
         background-color: base.$darken-color;
+        @include light-text;
     
+        .navmenu a {
+            @include light-text;
+        }
+
         .main {
             background-color: base.$secondary-color;
             @include light-text;
