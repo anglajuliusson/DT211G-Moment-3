@@ -239,25 +239,25 @@ body {
 
 //Ljusttema
 @mixin dark-text {
-    color: base.$light-font-color;
+    color: base.$dark-font-color;
   }
 @media (prefers-color-scheme: light) {
     body {
         background-color: base.$primary-color;
 
         .main {
-            background-color: base.$lighter-color;
+            background-color: base.$lighten-color;
             @include dark-text;
         }
     }
 }
 // Mörkttema
 @mixin light-text {
-    color: base.$dark-font-color;
+    color: base.$light-font-color;
   }
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: base.$darker-color;
+        background-color: base.$darken-color;
     
         .main {
             background-color: base.$secondary-color;
