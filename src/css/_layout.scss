@@ -19,7 +19,7 @@
         }
     }
 }
-@media (max-width:601px) { 
+@media (max-width:600px) { 
     /* Media queries så att hamburgarmenyn endast visas för mindre skärmar*/ 
     /* CSS för hamburgermenyn*/ 
     nav { 
@@ -58,8 +58,8 @@
     display: flex; 
     align-items: center; 
     padding: 8px 15px; 
-    background-color: #190B80; 
-    border: white solid 2px; 
+    background-color: base.$primary-color; 
+    border: base.$dark-font-color, 2px; 
     cursor: pointer; 
     float: right; 
     } 
@@ -74,12 +74,12 @@
     display: block; 
     width: 20px;
     height: 3px; 
-    background-color: white; 
+    background-color: base.$dark-font-color; 
     margin: 5px 0; 
     } 
     .menutext { 
     font-size: 1.2em; 
-    color: white; 
+    color: base.$dark-font-color; 
     } 
     /* Meny knapp, stäng*/ 
     .close { 
@@ -148,6 +148,9 @@ body {
 }
 }
 @media (max-width: 1024px) {
+.close{display: none;} 
+.menu-btn {display: none;} 
+.mobilmenu {display: none;} 
     body {
         display: grid;
         grid-template-areas: 
