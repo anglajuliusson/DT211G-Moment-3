@@ -155,10 +155,8 @@ body {
     .main {
         background-color: base.$lighter-color;
 
-        h1 {color: base.$dark-font-color;}
-        h2 {color: base.$dark-font-color;}
-        h3 {color: base.$dark-font-color;}
-        p {color: base.$dark-font-color;}
+        %dark-text {color: base.$dark-font-color;}
+        h1, h2, h3, p {@extend %dark-text}
         }
     }
 }
