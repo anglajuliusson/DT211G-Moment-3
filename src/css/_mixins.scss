@@ -9,7 +9,7 @@
         background-color: base.$primary-color;
         @include dark-text; // Mörk text
 
-        .navmenu a { // Länkar navmenu
+        a { // Länkar navmenu
             @include dark-text; // Mörk text
         }
         .menu-btn { // Menubutton
@@ -37,7 +37,7 @@
         background-color: base.$darken-color;
         @include light-text; // Ljustext
     
-        .navmenu a { // länkar navmenu
+        a { // länkar navmenu
             @include light-text; // Ljustext på meny
         }
         .menu-btn { // Menubutton
