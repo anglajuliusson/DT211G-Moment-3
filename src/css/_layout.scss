@@ -60,8 +60,7 @@
     display: flex; 
     align-items: center; 
     padding: 8px 15px; 
-    background-color: base.$primary-color; 
-    border: base.$dark-font-color, 2px; 
+    border: 2px; 
     cursor: pointer; 
     float: right; 
     } 
@@ -76,12 +75,10 @@
     display: block; 
     width: 20px;
     height: 3px; 
-    background-color: base.$dark-font-color; 
     margin: 5px 0; 
     } 
     .menutext { 
     font-size: 1.2em; 
-    color: base.$dark-font-color; 
     } 
     /* Meny knapp, stäng*/ 
     .close { 

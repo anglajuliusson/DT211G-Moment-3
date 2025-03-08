@@ -5,17 +5,26 @@
     color: base.$dark-font-color;
   }
 @media (prefers-color-scheme: light) {
-    body {
+    body { // Bakgrundsfärg hela sidan
         background-color: base.$primary-color;
-        @include dark-text;
+        @include dark-text; // Mörk text
 
-        .navmenu a {
+        .navmenu a { // Länkar navmenu
+            @include dark-text; // Mörk text
+        }
+        .menu-btn { // Menubutton
+            background-color: base.$primary-color;
             @include dark-text;
         }
-
-        .main {
-            background-color: base.$lighten-color;
+        .bars {
+            background-color: base.$dark-font-color;
+        }
+        .menutext {
             @include dark-text;
+        }
+        .main { // Bakgrundsfärg innehåll
+            background-color: base.$lighten-color;
+            @include dark-text; // Mörk text
         }
     }
 }
@@ -24,17 +33,26 @@
     color: base.$light-font-color;
   }
 @media (prefers-color-scheme: dark) {
-    body {
+    body { // Bakgrundsfärg hela sidan
         background-color: base.$darken-color;
-        @include light-text;
+        @include light-text; // Ljustext
     
-        .navmenu a {
-            @include light-text;
+        .navmenu a { // länkar navmenu
+            @include light-text; // Ljustext på meny
         }
-
-        .main {
+        .menu-btn { // Menubutton
             background-color: base.$secondary-color;
             @include light-text;
+        }
+        .bars {
+            background-color: base.$secondary-color;
+        }
+        .menutext {
+            @include light-text;
+        }
+        .main { // Bakgrundsfärg innehåll
+            background-color: base.$secondary-color;
+            @include light-text; // Ljustext
         }
     }
 }
