@@ -45,11 +45,11 @@
     li { 
     padding: 0.8em 0; 
     width: 100%; 
-        :hover { 
-            background-color: base.$primary-color; 
-            cursor: pointer; 
-        }
-    } 
+    }
+    li:hover { 
+        background-color: base.$primary-color; 
+        cursor: pointer; 
+    }
     a { 
     color: base.$light-font-color; 
     text-decoration: none; 
@@ -196,7 +196,7 @@ body {
 @media (max-width: 600px) {
     .close{display: block;} 
     .menu-btn {display: block;} 
-    .mobilmenu {display: block;} 
+    .mobilmenu {display: block !important;} 
     body {
         display: grid;
         grid-template-areas: 
