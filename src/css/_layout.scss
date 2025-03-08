@@ -120,6 +120,7 @@ body {
     align-items: center;
 
     .header {
+        grid-area: header;
         text-align: center;
         margin: 2em;
     }
@@ -165,6 +166,7 @@ body {
         align-items: center;
     
         .header {
+            grid-area: header;
             text-align: center;
             margin: 2em;
         }
@@ -210,8 +212,19 @@ body {
         align-items: center;
     
         .header {
+            grid-area: header;
             text-align: center;
             margin: 2em;
+            display: grid;
+            grid-template-areas: 
+            "mainheader menubutton";
+            grid-template-rows: auto;
+            h1 {
+                grid-area: mainheader;
+            }
+            button {
+                grid-area: menubutton;
+            }
         }
         .main {
             grid-area: main;
