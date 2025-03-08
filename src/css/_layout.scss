@@ -51,7 +51,6 @@
         cursor: pointer; 
     }
     a { 
-    color: base.$light-font-color; 
     text-decoration: none; 
     padding: 0 1em; 
     } 
@@ -72,13 +71,13 @@
     } 
     /* CSS för hamburger-icon*/ 
     .bars { 
-    display: block; 
+    display: block;
     width: 20px;
     height: 3px; 
     margin: 5px 0; 
     } 
     .menutext { 
-    font-size: 1.2em; 
+    font-size: large; 
     } 
     /* Meny knapp, stäng*/ 
     .close { 
@@ -98,7 +97,7 @@
     position: relative; 
     top: -3px;   
     }
-} 
+}
 }
 // Layout 
 @media (min-width: 1025px) {
