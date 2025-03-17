@@ -24,7 +24,6 @@
 /* CSS för mobilmenyn och att den endast visas för mindre skärmar */
 @media (max-width: 600px) {
 nav {
-    background-color: base.$primary-color;
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
     font-size: 1.4em;
     position: absolute;
@@ -47,12 +46,10 @@ nav {
             font-size: medium;
             margin: 10px;
             a {
-                color: base.$dark-font-color;
                 text-decoration: none;
                 padding: 0 1em;
             }
             &:hover {
-                background-color: base.$primary-color;
                 cursor: pointer;
             }
         }
@@ -75,7 +72,6 @@ nav {
     padding: 10px;
     width: 150px;
     height: 50px;
-    background-color: base.$primary-color;
     border: black solid 2px;
     cursor: pointer;
     margin-left: auto;
@@ -84,7 +80,6 @@ nav {
 }
     .menutext {
         font-size: 1.2em;
-        color: base.$dark-font-color;
         display: block;
         align-items: center;
         justify-content: center;

@@ -8,9 +8,15 @@
     body { // Bakgrundsfärg hela sidan
         background-color: base.$primary-color;
         @include dark-text; // Mörk text
+        nav {
+            background-color: base.$primary-color;
 
-        a { // Länkar navmenu
-            @include dark-text; // Mörk text
+            a { // Länkar navmenu
+                @include dark-text; // Mörk text
+            }
+            &:hover {
+                background-color: base.$primary-color;
+            }
         }
         .menu-btn { // Menubutton
             background-color: base.$primary-color;
@@ -36,9 +42,15 @@
     body { // Bakgrundsfärg hela sidan
         background-color: base.$darken-color;
         @include light-text; // Ljustext
-    
+    nav {
+        background-color: base.$darken-color;
+
         a { // länkar navmenu
             @include light-text; // Ljustext på meny
+        }
+        &:hover {
+            background-color: base.$darken-color;
+        }
         }
         .menu-btn { // Menubutton
             background-color: base.$secondary-color;
