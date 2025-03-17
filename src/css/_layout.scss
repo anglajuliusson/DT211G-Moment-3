@@ -13,7 +13,6 @@
     }
     a {
         text-decoration: none;
-        color: black;
 
         &.duarhar {
             text-decoration: underline;
@@ -125,23 +124,25 @@ nav {
     top: -3px;
 }
 
-
-
-// Layout 
+// Layout
 @media (min-width: 1025px) {
 .close{display: none;} 
 .menu-btn {display: none;} 
 .mobilmenu {display: none !important;} 
+%centered-content-computer {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 body {
     display: grid;
     grid-template-areas: 
-    "header"
-    "main"
-    "footer";
+        "header"
+        "main"
+        "footer";
     grid-template-rows: auto;
-    margin: 0%;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    @extend %centered-content-computer;
 
     .header {
         grid-area: header;
@@ -152,9 +153,7 @@ body {
         grid-area: main;
         padding: 2em;
         margin: 2em;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        @extend %centered-content-computer;
         p {
             max-width: 500px;
             text-align: left;
@@ -163,12 +162,11 @@ body {
         img {
             width: 400px;
             height: 500px;
-            justify-content: center;
-            align-items: center;
+            @extend %centered-content-computer;
         }
     }
     .footer {
-        text-align: center;
+        @extend %centered-content-computer;
         font-size: large;
         margin: 2em;
     }
@@ -178,16 +176,20 @@ body {
 .close{display: none;} 
 .menu-btn {display: none;} 
 .mobilmenu {display: none !important;} 
+%centered-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
     body {
         display: grid;
         grid-template-areas: 
-        "header"
-        "main"
-        "footer";
+            "header"
+            "main"
+            "footer";
         grid-template-rows: auto;
-        margin: 0%;
-        justify-content: center;
-        align-items: center;
+        margin: 0;
+        @extend %centered-content;
     
         .header {
             grid-area: header;
@@ -198,9 +200,7 @@ body {
             grid-area: main;
             padding: 2em;
             margin: 2em;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            @extend %centered-content;
             p {
                 max-width: 500px;
                 text-align: left;
@@ -209,12 +209,11 @@ body {
             img {
                 width: 300px;
                 height: 400px;
-                justify-content: center;
-                align-items: center;
+                @extend %centered-content;
             }
         }
         .footer {
-            text-align: center;
+            @extend %centered-content;
             font-size: large;
             margin: 2em;
         }
@@ -225,16 +224,20 @@ body {
     .menu-btn {display: block;} 
     .mobilmenu {display: block !important;} 
     .bars {display: block !important;}
+    %centered-content-mobile {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
     body {
         display: grid;
         grid-template-areas: 
-        "header"
-        "main"
-        "footer"; 
+            "header"
+            "main"
+            "footer";
         grid-template-rows: auto;
-        margin: 0%;
-        justify-content: center;
-        align-items: center;
+        margin: 0;
+        @extend %centered-content-mobile;
     
         .header {
             grid-area: header;
@@ -250,18 +253,14 @@ body {
             button {
                 grid-area: menubutton;
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
+                @extend %centered-content-mobile;
             }
         }
         .main {
             grid-area: main;
             padding: 2em;
             margin: 2em;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            @extend %centered-content-mobile;
             p {
                 max-width: 500px;
                 text-align: left;
@@ -270,12 +269,11 @@ body {
             img {
                 width: 200px;
                 height: 300px;
-                justify-content: center;
-                align-items: center;
+                @extend %centered-content-mobile;
             }
         }
         .footer {
-            text-align: center;
+            @extend %centered-content-mobile;
             font-size: large;
             margin: 2em;
         }
