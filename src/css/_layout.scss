@@ -1,5 +1,9 @@
 @use "base";
 
+img {
+    border-radius: 20px;
+}
+
 // Navmenu
 @media (min-width: 601px) {
 .menu {
