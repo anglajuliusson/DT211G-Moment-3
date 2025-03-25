@@ -26,8 +26,11 @@
                 @include dark-text; // Mörk text
             }
             &:hover {
-                background-color: base.$primary-color;
+                background-color: base.$light-footer-color;
             }
+        }
+        .menu {
+            background-color: base.$light-footer-color;
         }
         .menu-btn { // Menubutton
             background-color: base.$primary-color;
@@ -67,8 +70,11 @@
             @include light-text; // Ljustext på meny
         }
         &:hover {
-            background-color: base.$darken-color;
+            background-color: base.$dark-footer-color;
         }
+        }
+        #menu {
+            background-color: base.$dark-footer-color;
         }
         .menu-btn { // Menubutton
             background-color: base.$darken-color;
