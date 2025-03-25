@@ -193,7 +193,6 @@ body {
         padding: 2em;
         width: 100vw;  
         margin-left: calc(-50vw + 50%); 
-    
     }
 }
 }
@@ -220,6 +219,14 @@ body {
             grid-area: header;
             text-align: center;
             margin: 2em;
+            @extend %centered-content;
+        h1 {
+            padding: 1.5em;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 2em;
+            margin-top: 5em;
+        }
         }
         .main {
             grid-area: main;
@@ -241,6 +248,11 @@ body {
             @extend %centered-content;
             font-size: large;
             margin: 2em;
+            margin-top: 3em;
+            margin-bottom: 0;
+            padding: 2em;
+            width: 100vw;  
+            margin-left: calc(-50vw + 50%); 
         }
     }
 }
