@@ -16,6 +16,9 @@
     body { // Bakgrundsfärg hela sidan
         background-color: base.$primary-color;
         @include dark-text; // Mörk text
+    h1 {
+        background-color: base.$light-footer-color;
+    }
         nav {
             background-color: base.$primary-color;
 
@@ -54,6 +57,9 @@
     body { // Bakgrundsfärg hela sidan
         background-color: base.$darken-color;
         @include light-text; // Ljustext
+    h1 {
+        background-color: base.$secondary-color;
+    }
     nav {
         background-color: base.$darken-color;
 

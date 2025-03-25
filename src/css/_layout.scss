@@ -154,6 +154,13 @@ body {
         grid-area: header;
         text-align: center;
         margin: 2em;
+        @extend %centered-content-computer;
+        h1 {
+            padding: 1.5em;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 2em;
+        }
     }
     .main {
         grid-area: main;
