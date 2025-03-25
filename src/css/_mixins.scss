@@ -41,6 +41,9 @@
             background-color: base.$lighten-color;
             @include dark-text; // Mörk text
         }
+        .footer {
+            background-color: base.$light-footer-color;
+        }
     }
 }
 // Mörkttema
@@ -75,6 +78,9 @@
         .main { // Bakgrundsfärg innehåll
             background-color: base.$secondary-color;
             @include light-text; // Ljustext
+        }
+        .footer {
+            background-color: base.$dark-footer-color;
         }
     }
 }

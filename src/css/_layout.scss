@@ -173,8 +173,13 @@ body {
     }
     .footer {
         @extend %centered-content-computer;
+        grid-area: footer;
         font-size: large;
-        margin: 2em;
+        margin-top: 2em;
+        padding: 2em;
+        width: 100vw;  
+        margin-left: calc(-50vw + 50%); 
+    
     }
 }
 }
