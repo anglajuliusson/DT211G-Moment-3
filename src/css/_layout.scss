@@ -19,6 +19,7 @@ main {
     width: 100vw;
     left: 0;
     top: 0;
+    right: 0;
     ul {
         list-style: none;
         display: flex;
@@ -38,13 +39,15 @@ main {
 nav {
     box-shadow: 0 0px 10px rgba(0, 0, 0, 0.71);
     font-size: 1.4em;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     height: 100vh;
     width: 250px;
     display: none;
+    max-width: 100%;
     z-index: 1000; /* Placera menyn längst fram */
+    overflow: hidden;
     ul {
         width: 100%;
         list-style-type: none;
@@ -155,6 +158,7 @@ body {
     grid-template-rows: auto;
     margin: 0;
     @extend %centered-content-computer;
+    overflow-x: hidden;
 
     .header {
         grid-area: header;
@@ -174,6 +178,7 @@ body {
         padding: 2em;
         margin: 2em;
         @extend %centered-content-computer;
+        max-width: 600px;
         p {
             max-width: 500px;
             text-align: left;
@@ -192,7 +197,7 @@ body {
         margin-top: 3em;
         padding: 2em;
         width: 100vw;  
-        margin-left: calc(-50vw + 50%); 
+        margin-left: 0; 
     }
 }
 }
@@ -231,8 +236,10 @@ body {
         .main {
             grid-area: main;
             padding: 2em;
-            margin: 2em;
+            margin: 4em;
             @extend %centered-content;
+            max-width: 600px;
+            width: 80%;
             p {
                 max-width: 500px;
                 text-align: left;
@@ -244,15 +251,19 @@ body {
                 @extend %centered-content;
             }
         }
+        .infotextsass {
+            @extend %centered-content;
+        }
         .footer {
             @extend %centered-content;
             font-size: large;
-            margin: 2em;
             margin-top: 3em;
-            margin-bottom: 0;
             padding: 2em;
-            width: 100vw;  
-            margin-left: calc(-50vw + 50%); 
+            position: relative;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100vw;
         }
     }
 }
@@ -275,28 +286,32 @@ body {
         grid-template-rows: auto;
         margin: 0;
         @extend %centered-content-mobile;
-    
+        overflow-x: hidden;
+        max-width: 600px;
+        width: 100%;
         .header {
             grid-area: header;
             text-align: center;
-            margin: 2em;
             display: grid;
             grid-template-areas: 
             "mainheader menubutton";
             grid-template-rows: auto;
             h1 {
                 grid-area: mainheader;
+                border-radius: 50%;
+                margin: 2em;
             }
             button {
                 grid-area: menubutton;
                 display: flex;
                 @extend %centered-content-mobile;
+                top: 50px;
+                right: 50px;
             }
         }
         .main {
             grid-area: main;
             padding: 2em;
-            margin: 2em;
             @extend %centered-content-mobile;
             p {
                 max-width: 500px;
@@ -309,10 +324,19 @@ body {
                 @extend %centered-content-mobile;
             }
         }
+        .infotextsass {
+            @extend %centered-content-mobile
+        }
         .footer {
             @extend %centered-content-mobile;
             font-size: large;
-            margin: 2em;
+            margin-top: 3em;
+            margin-bottom: 0;
+            margin-right: 0;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            bottom: 0;
         }
     }
 }
