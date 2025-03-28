@@ -3,9 +3,6 @@
 img {
     border-radius: 20px;
 }
-main {
-    border-radius: 50px;
-}
 
 // Navmenu
 @media (min-width: 601px) {
@@ -179,6 +176,7 @@ body {
         margin: 2em;
         @extend %centered-content-computer;
         max-width: 600px;
+        border-radius: 50px;
         p {
             max-width: 500px;
             text-align: left;
@@ -240,6 +238,7 @@ body {
             @extend %centered-content;
             max-width: 600px;
             width: 80%;
+            border-radius: 50px;
             p {
                 max-width: 500px;
                 text-align: left;
@@ -296,10 +295,14 @@ body {
             grid-template-areas: 
             "mainheader menubutton";
             grid-template-rows: auto;
+            @extend %centered-content-mobile;
+            margin: 2em;
             h1 {
                 grid-area: mainheader;
                 border-radius: 50%;
                 margin: 2em;
+                display: flex;
+                top: 150px;
             }
             button {
                 grid-area: menubutton;
