@@ -308,8 +308,8 @@ body {
                 grid-area: menubutton;
                 display: flex;
                 @extend %centered-content-mobile;
-                top: 50px;
-                right: 50px;
+                top: 20px;
+                right: 20px;
             }
         }
         .main {
