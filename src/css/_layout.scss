@@ -315,6 +315,7 @@ body {
         .main {
             grid-area: main;
             padding: 2em;
+            margin: auto;
             @extend %centered-content-mobile;
             p {
                 max-width: 500px;
