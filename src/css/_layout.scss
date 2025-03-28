@@ -173,7 +173,7 @@ body {
     .main {
         grid-area: main;
         padding: 2em;
-        margin: 2em;
+        margin: auto;
         @extend %centered-content-computer;
         max-width: 600px;
         border-radius: 50px;
@@ -234,7 +234,7 @@ body {
         .main {
             grid-area: main;
             padding: 2em;
-            margin: 4em;
+            margin: auto;
             @extend %centered-content;
             max-width: 600px;
             width: 80%;
